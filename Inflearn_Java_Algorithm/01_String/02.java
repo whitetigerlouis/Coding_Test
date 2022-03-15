@@ -33,7 +33,8 @@ public class Main {
     2. 그 후에 대, 소문자로 변환한다.
   */
   public String solve(String src) {
-    String ans = null;
+    String ans = "";
+    /*
     StringBuilder sb = new StringBuilder();
     for (char c : src.toCharArray()) {
       if ('a' <= c && c <= 'z') {
@@ -45,6 +46,14 @@ public class Main {
       }
     }
     ans = sb.toString();
+    */
+    for (char x : src.toCharArray()) {
+      if (Character.isLowerCase(x)) {
+        ans += Character.toUpperCase(x);
+      } else {
+        ans += Character.toLowerCase(x);
+      }
+    }
     return ans;
   }
 
