@@ -44,17 +44,27 @@ public class Main {
   */
   public String solve(String str) {
     char[] ch = str.toCharArray();
+    // 풀이방법 #1
     int len = str.length() - 1;
-    //System.out.println("str = " + str);
-    //System.out.println("len = " + len);
-    for (int j = 0; j < str.length()/2; j++) {
+    for (int j = 0; j < str.length()/2; j++) { // len/2를 하지 않으면 다시 원복 되어 버린다.
       char tmp = ch[j];
       ch[j] = ch[len];
       ch[len] = tmp;
       len--;
     }
-    //String answer = ch.toString();
     String answer = new String(ch);
+
+    // 풀이방법 #2
+    int lt = 0, rt = str.length() - 1;
+    while (lt < rt) {
+      char tmp = ch[lt];
+      ch[lt] = ch[rt];
+      ch[rt] = tmp;
+      lt++;
+      rt--;
+    }
+    String tmp = String.valueOf(ch);
+    
     return answer;
   }
 
