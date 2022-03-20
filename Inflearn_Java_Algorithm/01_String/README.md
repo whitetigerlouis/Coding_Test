@@ -20,5 +20,9 @@
 6. ch[]을 String으로 변환: str = String.valueOf(ch);
 7. String을 배열로 만듬: str.charAt(i);
 8. 문자열에서 해당 문자가 처음 발견된 위치를 반환: str.indexOf(str.charAt(i));
-9. 대소문자 구별없이 두 문자열 비교: str.equalsIgonreCase(tmp)
-10. 문자열에서 알파벳만 추출하는 방법: str = str.toUpperCase().replaceAll("[^A-Z]","");
+9. 대소문자 구별없이 두 문자열 비교: str.equalsIgonreCase(tmp);
+10. 문자열에서 알파벳만 추출하는 방법(정규식): str = str.replaceAll("[^A-Z]","");
+11. 문자열에서 숫자만 추출하는 방법(정규식): str = str.replaceAll("[^0-9]","");
+12. 문자열에서 숫자만 추출하는 방법(ASCII): if (x >= 48 && x <= 57)
+13. 숫자 문자열을 정수로 변환하는 법: num = (int)num * 10 + ((char)x - 48);
+14. 문자가 숫자인지 확인하는 법: if (Character.isDigit(x))
