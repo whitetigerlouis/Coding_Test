@@ -21,4 +21,4 @@
 7. String을 배열로 만듬: str.charAt(i);
 8. 문자열에서 해당 문자가 처음 발견된 위치를 반환: str.indexOf(str.charAt(i));
 9. 대소문자 구별없이 두 문자열 비교: str.equalsIgonreCase(tmp)
-10. 문자열에서 알파벳만 추출하는 방법: str.toUpperCase().replaceAll("[^A-Z]","");
+10. 문자열에서 알파벳만 추출하는 방법: str = str.toUpperCase().replaceAll("[^A-Z]","");
