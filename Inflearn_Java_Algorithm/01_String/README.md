@@ -7,7 +7,8 @@
 6. 중복문자제거
 7. 회문 문자열
 8. 팰린드롬(replaceAll 정규식이용)
-9. 
+9. 숫자만 추출
+10. 가장 짧은 문자거리
 
 
 
@@ -26,3 +27,4 @@
 12. 문자열에서 숫자만 추출하는 방법(ASCII): if (x >= 48 && x <= 57)
 13. 숫자 문자열을 정수로 변환하는 법: num = (int)num * 10 + ((char)x - 48);
 14. 문자가 숫자인지 확인하는 법: if (Character.isDigit(x))
+15. 둘 중 작은 수 선택: answer[i] = Math.min(answer[i], p); -> answer[i] = (answer[i] > p) ? p : answer[i];
