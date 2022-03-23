@@ -40,7 +40,8 @@ public class Main {
     s += " "; // 중요 포인트
     char[] c = s.toCharArray();
 
-    for (int i = 0; i < len; i++) {
+    // 내 풀이 방법
+    for (int i = 0; i < len; i++) {// i가 빈문자 전까지만 loop를 돌아야 함
       if (c[i] == c[i+1]) {
         count++;
       } else {
@@ -50,6 +51,16 @@ public class Main {
         }
         count = 1;
       }
+    }
+   
+    // 강의 풀이 방법
+    for (int i = 0; i < s.length()-1; i++) {
+     if (s.charAt(i) == s.charAt(i+1)) count++;
+     else {
+      answer += s.charAt(i);
+      if (count > 1) answer += String.valueOf(cnt);
+      count = 1;
+     }
     }
     return answer;
   }
