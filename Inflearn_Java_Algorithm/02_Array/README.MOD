@@ -1,4 +1,6 @@
 1. 큰 수 출력하기
+2. 보이는 학생
+3. 가위바위보
 
 
 
@@ -9,7 +11,6 @@
   for (int x : m.solution(m.n, m.array)) {
     System.out.print(x + " ");
   }
-
 
 2. 결과문자를 누적할 때 char[] 말고 string을 사용하자.
   String answer = "";
