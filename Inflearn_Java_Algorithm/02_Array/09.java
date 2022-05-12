@@ -47,44 +47,42 @@ public class Main {
     public int solve() {
         //int[] answer = new int[n];
         int max = 0;
-        int count = 0;
-        // 1. 행 합산
+        int sum1, sum2;
+        // 1. 행/열 합산
         for (int i = 0; i < n; i++) {
+            sum1 = sum2 = 0;
             for (int j = 0; j < n; j++) {
-                count += A[i][j];
+                sum1 += A[i][j]; // 행기준 합산
+                sum2 += A[j][i]; // 열기준 합산
             }
-            if (max < count) {
-                max = count;
+            max = Math.max(max, sum1);
+            max = Math.max(max, sum2);
+            /*
+            if (max < sum1) {
+                max = sum1;
             }
-            count = 0;
+            if (max < sum2) {
+                max = sum2;
+            }
+            */
         }
-        // 2. 열 합산
+        sum1 = sum2 = 0;
+        
+        // 2. 대각선 합산
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                count += A[j][i];
-            }
-            if (max < count) {
-                max = count;
-            }
-            count = 0;
+            sum1 += A[i][i];
+            sum2 += A[i][n-i];
         }
-        // 3. 대각선 오른쪽으로 합산
-        for (int i = 0; i < n; i++) {
-            count += A[i][i];
+        max = Math.max(max, sum1);
+        max = Math.max(max, sum2);
+        /*
+        if (max < sum1) {
+            max = sum1;
         }
-        if (max < count) {
-                max = count;
+        if (max < sum2) {
+            max = sum2;
         }
-        count = 0;
-
-        // 4. 대각선 왼쪽으로 합산
-        for (int i = 0; i < n; i++) {
-            count += A[i][n-i];
-        }
-        if (max < count) {
-                max = count;
-        }
-        count = 0;
+        */
         return max;
     }
 
