@@ -71,7 +71,7 @@ public class Main {
         // 2. 대각선 합산
         for (int i = 0; i < n; i++) {
             sum1 += A[i][i];
-            sum2 += A[i][n-i];
+            sum2 += A[i][n-i-1];
         }
         max = Math.max(max, sum1);
         max = Math.max(max, sum2);
