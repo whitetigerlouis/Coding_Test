@@ -41,3 +41,6 @@
       }
       return true;
   }
+  
+  5. max값 초기화 하기
+    int max = Integer.MIN_VALUE;
