@@ -32,3 +32,16 @@ class Point implements Comparable<Point>{ // x, y 좌료를 가지는 전용 클
 }
 
   Collections.sort(A);
+  
+7. 이분검색 알고리즘
+        int lt = 0, rt = n-1;
+        Arrays.sort(A); // 오름차순으로 정렬이 되어 있어야 함.
+        while (lt <= rt) {
+            int mid = (lt+rt)/2;
+            if (m == A[mid]) return mid+1;
+            else if (m < A[mid]) {
+                rt = mid -1;
+            } else {
+                lt = mid + 1;
+            }
+        }
