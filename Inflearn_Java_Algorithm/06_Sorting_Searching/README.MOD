@@ -11,3 +11,7 @@
 4. pos자리 앞부터 1칸씩 뒤로 밀기
   for (int i=pos; i>=1; i--)
       cache[i] = cache[i-1];
+
+5. A배열을 오름차순으로 정렬
+  Arrays.sort(A);
+  
