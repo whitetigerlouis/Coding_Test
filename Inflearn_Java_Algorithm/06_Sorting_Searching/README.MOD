@@ -15,3 +15,20 @@
 5. A배열을 오름차순으로 정렬
   Arrays.sort(A);
   
+6. x, y 좌표를 정렬하는 방법
+class Point implements Comparable<Point>{ // x, y 좌료를 가지는 전용 클래스
+    public int x, y;
+    Point(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+    @Override
+    public int compareTo(Point o){
+        if(this.x == o.x)
+            return this.y - o.y;// x축이 같으면 y축 기준 오름차순 정렬
+        else
+            return this.x - o.x;// x축 기준 오름차순 정렬
+    }
+}
+
+  Collections.sort(A);
