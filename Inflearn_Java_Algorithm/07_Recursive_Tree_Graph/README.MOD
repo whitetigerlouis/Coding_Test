@@ -10,3 +10,17 @@
             return fibo[n] = DFS(n-2) + DFS(n-1);
         }
     }
+
+2. 이진트리순회(DFS)
+    Node root;
+    public void DFS(Node root){
+        if(root == null) return;// 말단에 연결된 노드가 없으면 리턴
+        else {
+            //System.out.print(root.data+" ");
+            DFS(root.lt);
+            //System.out.print(root.data+" ");
+            DFS(root.rt);
+            System.out.print(root.data+" ");
+        }
+    }
+
