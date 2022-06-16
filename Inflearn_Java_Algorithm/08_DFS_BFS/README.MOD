@@ -9,3 +9,6 @@
         else 
             return dy[n][r] = DFS(n-1, r-1) + DFS(n-1, r);
     }
+
+2. DFS 조합문제
+
