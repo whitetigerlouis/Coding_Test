@@ -23,3 +23,9 @@
   
 [백준] 2164번: 카드2
   - 큐
+  
+[백준] 11286번: 절댓값 힙
+  - 우선순위 큐
+  - PriorityQueue<Integer> Q = new PriorityQueue<>((o1, o2) -> {
+
+
