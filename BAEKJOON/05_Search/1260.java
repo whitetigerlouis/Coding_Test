@@ -1,5 +1,5 @@
 /*
-[백준] 13023번: ABCDE 친구관계 파악하기
+[백준] 1260번: DFS와 BFS
 */
 
 import java.util.*;
