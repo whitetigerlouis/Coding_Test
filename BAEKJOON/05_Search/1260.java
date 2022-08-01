@@ -41,8 +41,8 @@ public class Main {
 
     void BFS(int node) {
         Queue<Integer> Q = new LinkedList<Integer>();
-        Q.add(node);
-        visited[node] = true;
+	visited[node] = true;
+        Q.add(node); // 시작노드 업데이트
 
         while (!Q.isEmpty()) {
             int now_node = Q.poll();
